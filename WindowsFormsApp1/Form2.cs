@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         Cashier_Form cash_form=new Cashier_Form();
         
         int counter = 0;
+        int counter2 = 0;
         public login_Form()
         {
             InitializeComponent();
@@ -70,9 +71,6 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if(counter==0)
-            textBox2.Text = "";
-            counter++;
             textBox2.Font = new Font(textBox2.Font.FontFamily, 16);
             textBox2.PasswordChar = '*';
         }
@@ -83,6 +81,28 @@ namespace WindowsFormsApp1
             {
                 this.Close();
             }
+            else if (e.KeyChar == 10)
+            {
+                button1_Click(this, e);
+            }
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (counter == 0)
+                textBox2.Text = "";
+            counter++;
+            textBox2.Font = new Font(textBox2.Font.FontFamily, 16);
+            textBox2.PasswordChar = '*';
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (counter2 == 0)
+                textBox1.Text = "";
+            counter2++;
+            textBox2.Font = new Font(textBox2.Font.FontFamily, 16);
+            textBox2.PasswordChar = '*';
         }
     }
 }

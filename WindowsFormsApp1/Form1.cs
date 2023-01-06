@@ -141,12 +141,6 @@ namespace WindowsFormsApp1
             dataGridView1.Visible= true;
             drugBindingSource.DataSource = drugTableAdapter.GetData();
             dataGridView1.DataSource = drugBindingSource;
-
-
-            
-
-
-
         }
 
         private void براساسقیمتداروToolStripMenuItem_Click(object sender, EventArgs e)
@@ -730,6 +724,11 @@ namespace WindowsFormsApp1
             if (e.KeyChar == 27)
             {
                 this.Close();
+            }
+            else if (e.KeyChar == 10)
+            {
+                button1_Click_1(this, e);
+                
             }
         }
 
